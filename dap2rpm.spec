@@ -1,8 +1,8 @@
 
 Name:               dap2rpm
 Version:            0.1.5
-Release:            1%{?dist}
-Summary:            Python 2 library for generating RPM specfile for DevAssistant DAP packages
+Release:            2%{?dist}
+Summary:            Tool for generating RPM specfiles for DevAssistant DAP packages.
 
 Group:              Development/Libraries
 License:            GPLv2+
@@ -21,7 +21,7 @@ Requires:           python3-dap2rpm
 
 %description
 Tool for generating RPM specfiles for DevAssistant DAP packages. Python
-libraries are located in the packages python-dap2rpm and python3-dap2rpm
+libraries are located in the packages python-dap2rpm and python3-dap2rpm.
 
 %package -n python-dap2rpm
 Summary:            Python 2 library for generating RPM specfiles for DevAssistant DAP packages.
@@ -42,7 +42,7 @@ Requires:           python3-requests
 Python 3 library for generating RPM specfiles for DevAssistant DAP packages.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 
 # Remove bundled egg-info in case it exists
 rm -rf %{name}.egg-info %{py3dir}
@@ -85,5 +85,8 @@ popd
 %{python3_sitelib}/%{name}-%{version}*
 
 %changelog
+* Fri Jan 16 2015 Tomas Radej <tradej@redhat.com> - 0.1.5-2
+- Changed summary, setup
+
 * Wed Jan 14 2015 Tomas Radej <tradej@redhat.com> - 0.1.5-1
 - Initial commit
