@@ -1,7 +1,7 @@
 
 Name:               dap2rpm
-Version:            0.1.5
-Release:            3%{?dist}
+Version:            0.1.6
+Release:            1%{?dist}
 Summary:            Tool for generating RPM specfiles for DevAssistant DAP packages.
 
 Group:              Development/Libraries
@@ -88,6 +88,9 @@ popd
 %{python3_sitelib}/%{name}-%{version}*
 
 %changelog
+* Fri Jan 16 2015 Tomas Radej <tradej@redhat.com> - 0.1.6-1
+- Updated to latest upstream version
+
 * Fri Jan 16 2015 Tomas Radej <tradej@redhat.com> - 0.1.5-3
 - Dependency on rpmdevtools
 
