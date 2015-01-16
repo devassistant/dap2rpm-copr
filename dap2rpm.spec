@@ -1,7 +1,7 @@
 
 Name:               dap2rpm
 Version:            0.1.5
-Release:            2%{?dist}
+Release:            3%{?dist}
 Summary:            Tool for generating RPM specfiles for DevAssistant DAP packages.
 
 Group:              Development/Libraries
@@ -18,6 +18,7 @@ BuildRequires:      python-setuptools
 BuildRequires:      python3-setuptools
 
 Requires:           python3-dap2rpm
+Requires:           rpmdevtools
 
 %description
 Tool for generating RPM specfiles for DevAssistant DAP packages. Python
@@ -28,6 +29,7 @@ Summary:            Python 2 library for generating RPM specfiles for DevAssista
 Requires:           PyYAML
 Requires:           python-jinja2
 Requires:           python-requests
+Requires:           rpmdevtools
 
 %description -n python-dap2rpm
 Python 2 library for generating RPM specfiles for DevAssistant DAP packages.
@@ -37,6 +39,7 @@ Summary:            Python 3 library for generating RPM specfiles for DevAssista
 Requires:           python3-PyYAML
 Requires:           python3-jinja2
 Requires:           python3-requests
+Requires:           rpmdevtools
 
 %description -n python3-dap2rpm
 Python 3 library for generating RPM specfiles for DevAssistant DAP packages.
@@ -85,6 +88,9 @@ popd
 %{python3_sitelib}/%{name}-%{version}*
 
 %changelog
+* Fri Jan 16 2015 Tomas Radej <tradej@redhat.com> - 0.1.5-3
+- Dependency on rpmdevtools
+
 * Fri Jan 16 2015 Tomas Radej <tradej@redhat.com> - 0.1.5-2
 - Changed summary, setup
 
